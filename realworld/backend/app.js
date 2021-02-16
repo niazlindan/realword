@@ -39,7 +39,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb://mongo:27017/conduit').then(() => {
+  mongoose.connect('mongodb://localhost/conduit').then(() => {
     if (process.env.PERSIST_DB !== "true") {
       console.log('The DB is going to be cleared');
       // see https://gist.github.com/ecasilla/20f3a82398f0aa97d260
